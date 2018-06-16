@@ -2,6 +2,11 @@ package com.algorithms.dp;
 
 import java.util.HashSet;
 
+/*
+Input: s = "leetcode", wordDict = ["leet", "code"]
+Output: true
+*/
+
 public class WordBreak {
 
     public boolean wordBreak(String s, HashSet<String> wordDict) {
