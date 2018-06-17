@@ -1,5 +1,7 @@
 package com.algorithms.arrays;
 
+import com.algorithms.common.Utils;
+
 public class SortColors {
     public void sort(Integer[] nums){
 
@@ -9,18 +11,14 @@ public class SortColors {
         for (Integer i=l; i<=r; i++){
 
             while (nums[i] == 2 && i<r){
-                swap(nums, i , r);
+                Utils.swap(nums, i , r);
                 r--;
             }
 
             while(nums[i] == 0 && i>l){
-                swap(nums, i, l);
+                Utils.swap(nums, i, l);
                 l++;
             }
         }
-    }
-
-    private void swap(Integer[] nums, Integer i, Integer j){
-
     }
 }
