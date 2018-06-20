@@ -7,4 +7,8 @@ public class Utils {
         nums[i] = nums[j];
         nums[j] = temp;
     }
+
+    public static void reverse(Integer[] nums, Integer i, Integer j){
+
+    }
 }
