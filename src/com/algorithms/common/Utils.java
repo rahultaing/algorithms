@@ -8,6 +8,12 @@ public class Utils {
         nums[j] = temp;
     }
 
+    public static void swap(char[] ar, int i, int j){
+        char temp = ar[i];
+        ar[i] = ar[j];
+        ar[j] = temp;
+    }
+
     public static void reverse(Integer[] nums, Integer i, Integer j){
 
     }
