@@ -1,4 +1,4 @@
-package com.algorithms.arrays;
+package com.algorithms.dp;
 
 
 /*
