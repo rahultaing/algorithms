@@ -17,4 +17,8 @@ public class Utils {
     public static void reverse(Integer[] nums, Integer i, Integer j){
 
     }
+
+    public static void reverse(String s, Integer i, Integer j){
+
+    }
 }
