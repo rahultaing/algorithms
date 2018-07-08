@@ -13,6 +13,8 @@ Input:nums = [1,1,1], k = 2
 Output: 2
 
 */
+
+/*last practiced date : 7/6/2018*/
 public class SubArraySumEqualsK {
 
     public int subarraySum(int[] nums, int k) {
