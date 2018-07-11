@@ -13,6 +13,7 @@ public class SerializeDeserialize {
         return this.sb.toString();
     }
 
+    /*preorder serialization*/
     private void serializeRecurse(TreeNode node){
         if (node == null){
             this.sb.append("#").append(" ");

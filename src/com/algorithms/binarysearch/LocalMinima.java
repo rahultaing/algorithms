@@ -1,5 +1,9 @@
 package com.algorithms.binarysearch;
 
+/*time complexity: O(log N)*/
+
+/*last practiced date: 7/8/2018*/
+
 public class LocalMinima {
 
     public Integer findLocalMinima(Integer[] nums){

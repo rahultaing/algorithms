@@ -17,6 +17,9 @@ You may assume that the given Sudoku puzzle will have a single unique solution.
 The given board size is always 9x9
 */
 
+/*TODO: determine time/space complexity.*/
+
+/*last practiced date: 7/8/2018*/
 public class SudokuSolver {
 
     public void solveSudoku(char[][] board) {
