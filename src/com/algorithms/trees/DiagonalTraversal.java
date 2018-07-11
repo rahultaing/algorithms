@@ -5,12 +5,21 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
+/*
+
+https://www.geeksforgeeks.org/diagonal-traversal-of-binary-tree/
+
+Consider lines of slope -1 passing between nodes.
+Given a Binary Tree, print all diagonal elements in a binary tree belonging to same line.
+
+*/
 public class DiagonalTraversal {
 
     private HashMap<Integer, List<Integer>> map = new HashMap<>();
 
     public Collection<List<Integer>> traverse(TreeNode node){
 
+        this.recurse(node, 0);
         return this.map.values();
     }
 
