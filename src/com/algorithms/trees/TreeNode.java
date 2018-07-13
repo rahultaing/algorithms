@@ -5,8 +5,12 @@ public class TreeNode {
     public Integer val;
     public TreeNode right;
     public int verticalDistance;
+    public Character ch;
 
     public TreeNode(Integer val){
         this.val = val;
     }
+
+    // hack for constructing expression tree
+    public TreeNode(Character ch){this.ch = ch;}
 }
