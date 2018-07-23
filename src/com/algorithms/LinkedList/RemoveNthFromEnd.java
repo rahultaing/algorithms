@@ -1,7 +1,5 @@
 package com.algorithms.LinkedList;
 
-import java.util.List;
-
 /*
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 

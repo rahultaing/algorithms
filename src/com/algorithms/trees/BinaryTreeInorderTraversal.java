@@ -3,7 +3,8 @@ package com.algorithms.trees;
 import java.util.ArrayList;
 import java.util.List;
 
-/*iterative traversal like morris traversal*/
+/*iterative traversal like morris traversal
+* last practiced date: 7/14/2018*/
 
 public class BinaryTreeInorderTraversal {
 
