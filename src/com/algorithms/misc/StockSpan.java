@@ -1,5 +1,7 @@
 package com.algorithms.misc;
 
+import java.util.Stack;
+
 /*
 * https://www.geeksforgeeks.org/the-stock-span-problem/
 *
@@ -15,6 +17,24 @@ public class StockSpan {
 
     public void calculateSpan(int price[], int n, int S[]) {
 
+        if (n == 0){
+            return;
+        }
 
+        S[0] = 1;
+
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(0);
+        for (int i=1; i<n; i++){
+
+            while (! stack.isEmpty() && price[stack.peek()] <= price[i]){
+                stack.pop();
+            }
+
+            S[i] = stack.isEmpty() ? i+1 : i-stack.peek();
+
+            stack.push(i);
+        }
     }
 }
