@@ -14,8 +14,15 @@ public class Utils {
         ar[j] = temp;
     }
 
-    public static void reverse(Integer[] nums, Integer i, Integer j){
+    public static void reverse(int[] nums, Integer l, Integer r){
 
+        while (l < r){
+            int temp = nums[l];
+            nums[l] = nums[r];
+            nums[r] = temp;
+            l++;
+            r--;
+        }
     }
 
     public static void reverse(String s, Integer i, Integer j){

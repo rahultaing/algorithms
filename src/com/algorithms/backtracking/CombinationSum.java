@@ -1,6 +1,7 @@
 package com.algorithms.backtracking;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -42,6 +43,7 @@ public class CombinationSum {
     private List<List<Integer>> outList = new ArrayList<>();
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
 
+        Arrays.sort(candidates);
         this.recurse(candidates, new ArrayList<>(), target, 0);
         return this.outList;
     }
