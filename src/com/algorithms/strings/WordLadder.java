@@ -1,4 +1,6 @@
 package com.algorithms.strings;
+import java.util.HashSet;
+import java.util.List;
 
 /*
 https://leetcode.com/problems/word-ladder/description/
@@ -27,9 +29,6 @@ Output: 5
 Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
 return its length 5.
 */
-
-import java.util.HashSet;
-import java.util.List;
 
 /*TODO: determine time complexity.*/
 public class WordLadder {

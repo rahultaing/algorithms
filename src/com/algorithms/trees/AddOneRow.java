@@ -1,7 +1,8 @@
 package com.algorithms.trees;
 
 /*
-*Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
+*Given the root of a binary tree, then value v and depth d,
+ *  you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
 
 The adding rule is: given a positive integer depth d, for each NOT null tree nodes N in depth d-1,
 create two tree nodes with value v as N's left subtree root and right subtree root.
@@ -67,7 +68,32 @@ public class AddOneRow {
             return node;
         }
 
+        this.recurse(root, 1, d, v);
 
-        return null;
+        return root;
+    }
+
+    private void recurse(TreeNode node, int curDepth, int insertDepth, int val){
+
+        if (node == null){
+            return;
+        }
+
+        if (curDepth == insertDepth - 1){
+            TreeNode left = node.left;
+            TreeNode newLeftNode = new TreeNode(val);
+            node.left = newLeftNode;
+            newLeftNode.left = left;
+
+
+            TreeNode right = node.right;
+            TreeNode newRightNode = new TreeNode(val);
+            node.right = newRightNode;
+            newRightNode.right = right;
+        }
+        else{
+            this.recurse(node.left, curDepth+1, insertDepth, val);
+            this.recurse(node.right, curDepth+1, insertDepth, val);
+        }
     }
 }

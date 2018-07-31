@@ -1,7 +1,5 @@
 package com.algorithms.LinkedList;
 
-import java.util.List;
-
 public class RotateList {
 
     public ListNode rotate(ListNode list, int k){
