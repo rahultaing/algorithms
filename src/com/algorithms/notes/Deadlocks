@@ -1,0 +1,16 @@
+conditions for deadlocks:
+1. mutual exclusion
+2. Hold and wait
+3. No preemption
+4. Circular wait.
+
+
+Deadlock Avoidance: https://www.youtube.com/watch?v=8ZS7xzWPo5A
+1. Safe state vs Unsafe state.
+2. Banker's algorithm ensures that system never reaches an unsafe state.
+3. Grant a request only when a given request leaves the system in a safe state.
+
+Deadlock recovery:
+
+Deadlock prevention:
+1. by preventing one of the above 4 conditions from not happening in the system.
