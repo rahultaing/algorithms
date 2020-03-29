@@ -22,6 +22,7 @@ Input: A = [2, 4, 5, 10]
 Output: 7
 Explanation: We can make these trees: [2], [4], [5], [10], [4, 2, 2], [10, 2, 5], [10, 5, 2].
 
+https://www.geeksforgeeks.org/modulo-1097-1000000007/
 */
 
 import java.util.Arrays;
