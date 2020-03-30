@@ -27,15 +27,16 @@ You may assume that the input format is always valid, for example it could never
 contain two consecutive commas such as "1,,3".
 
 Example 1:
-
 Input: "9,3,4,#,#,1,#,#,2,#,6,#,#"
 Output: true
-Example 2:
 
+
+Example 2:
 Input: "1,#"
 Output: false
-Example 3:
 
+
+Example 3:
 Input: "9,#,#,1"
 Output: false
 */
@@ -71,5 +72,33 @@ public class VerifyPreorderSerialization {
         }
 
         return stack.size() == 1 && stack.peek().equals("#");
+    }
+}
+
+
+public class Solution{
+
+    public boolean isValidSerialization(String preorder){
+
+        int n = preorder.length();
+        int slots = 1;
+
+        for (int i=0; i<n; i++){
+            if (preorder.charAt(i)==','){
+                slots--;
+
+                if (slots < 0){
+                    return false;
+                }
+
+                if (preorder.charAt(i-1) != '#'){
+                    slots += 2;
+                }
+            }
+        }
+
+        slots = preorder.charAt(n-1) != '#' ? slots+1: slots-1;
+
+        return slots == 0;
     }
 }
