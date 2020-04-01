@@ -1,6 +1,8 @@
 package com.algorithms.trees;
 
 import java.util.Stack;
+/*This program takes input as postfix expression. 
+We might want to do the same for infix expression*/
 
 /*
 * https://www.geeksforgeeks.org/expression-tree/
