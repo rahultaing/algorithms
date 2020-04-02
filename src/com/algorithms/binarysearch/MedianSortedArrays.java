@@ -29,7 +29,7 @@ public class MedianSortedArrays {
 
             if (maxLeftX <= minRightY && maxLeftY <= minRightX){
                 if ((n+m)%2 == 0){
-                    return (Math.max(maxLeftX, maxLeftY) + Math.max(minRightX, minRightY))/2.0;
+                    return (Math.max(maxLeftX, maxLeftY) + Math.min(minRightX, minRightY))/2.0;
                 }else{
                     return (double) Math.max(maxLeftX, maxLeftY);
                 }
