@@ -16,7 +16,8 @@ public class Solution{
 
     public ExpensiveObject getExpensiveObject(){
 
-        // first check is done to avoid multiple threads to block on syncronized block when the 
+        // first check is done to avoid multiple threads to block on
+        // syncronized block when the 
         // object is already initialized
         if (expensiveObject == null){
             synchronized(this){
