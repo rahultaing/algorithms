@@ -13,13 +13,23 @@ public class Solution{
     
     public void increment(){
         semaphore.acquire();
-        sharedVariable++;
-        semaphore.release();
+        
+        try{
+            sharedVariable++;
+        }
+        finally{
+            semaphore.release();
+        }
     }
 
     public void decrement(){
         semaphore.acquire();
-        sharedVariable--;
-        semaphore.release();
+        
+        try{
+            sharedVariable--;
+        }
+        finally{
+            semaphore.release();
+        }
     }
 }
