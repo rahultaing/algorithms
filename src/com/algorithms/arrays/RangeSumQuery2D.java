@@ -8,6 +8,7 @@ public class NumMatrix {
         int n = matrix.length;
         int m = matrix[0].length;
 
+        // dp[i][j] represents sum of matrix area matrix[0][0] to matrix[i][j]
         dp = new int[n+1][m+1];
         
         for (int i=1; i<=n; i++){
