@@ -26,7 +26,7 @@ public class SumOfLeftLeaves {
             return 0;
         }
 
-        this.recurse(root.left, false);
+        this.recurse(root, false);
         return this.sum;
     }
 
