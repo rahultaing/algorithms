@@ -1,9 +1,12 @@
+/*
+https://leetcode.com/problems/validate-binary-search-tree/ 
+*/
+
 package com.algorithms.trees;
 
 public class ValidateBST {
 
     public boolean isValidBST(TreeNode root) {
-
         return this.recurse(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
