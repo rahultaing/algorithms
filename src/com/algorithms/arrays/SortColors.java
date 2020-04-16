@@ -36,8 +36,10 @@ public class SortColors {
         Integer l = 0;
         Integer r = nums.length-1;
 
-        for (Integer i=l; i<=r; i++){
-
+        int i=0;
+        
+        //was - for (Integer i=l; i<=r; i++)
+        while (i<=r){
             while (nums[i] == 2 && i<r){
                 Utils.swap(nums, i , r);
                 r--;
@@ -47,6 +49,8 @@ public class SortColors {
                 Utils.swap(nums, i, l);
                 l++;
             }
+
+            i++;
         }
     }
 }
