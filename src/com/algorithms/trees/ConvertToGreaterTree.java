@@ -41,8 +41,8 @@ public class ConvertToGreaterTree {
         }
 
         this.recurse(node.right);
-        node.val += sum;
-        sum = node.val;
+        node.val += this.sum;
+        this.sum = node.val;
         this.recurse(node.left);
     }
 }
