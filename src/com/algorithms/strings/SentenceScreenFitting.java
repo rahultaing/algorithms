@@ -17,7 +17,7 @@ public class Solution{
             }
             else{
 
-                while (start > 0 && (s.charAt((start-1)%l) == ' ')){
+                while (start > 0 && (s.charAt((start-1)%l) != ' ')){
                     start--;
                 }
             }
