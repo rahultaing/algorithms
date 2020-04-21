@@ -50,3 +50,32 @@ public class Solution{
         return -1;
     }
 }
+
+
+public class Solution2{
+
+    /* example: banana
+    str[2] == str[4] == n
+    dp[2][4] = dp[1][3] + 1 = 1 + 1 = 2
+    dp[1][3] = 1 because there is a string of length 1 that's repeated i.e. `a`
+     */
+    public int longestRepeatingSubstring(String s){
+
+        int n = s.length();
+        int[][] dp = new int[n+1][n+1];
+        int res = 0;
+
+        for (int i=1; i<=n; i++){
+            for (int j=i+1; j<=n; j++){
+
+                if (s.charAt(i-1) == s.charAt(j-1)){
+
+                    dp[i][j] = dp[i-1][j-1] + 1;
+                    res = Math.max(res, dp[i][j]);
+                }
+            }
+        }
+
+        return res;
+    }
+}
