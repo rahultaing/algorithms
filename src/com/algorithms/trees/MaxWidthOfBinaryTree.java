@@ -82,7 +82,7 @@ public class MaxWidthOfBinaryTree {
         }
 
         if (this.map.containsKey(depth)){
-            this.max = Math.max(this.max, index - this.map.get(depth));
+            this.max = Math.max(this.max, index - this.map.get(depth) + 1);
         }else{
             this.map.put(depth, index);
         }
