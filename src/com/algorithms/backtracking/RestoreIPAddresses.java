@@ -28,7 +28,7 @@ public class RestoreIPAddresses {
         int prev_pos = dots.get(dots.size()-1);
 
         for (int i = prev_pos+1; i<s.length(); i++){
-            if (! this.isValidSegment(prev_pos, i, s)) return;
+            if (! this.isValidSegment(prev_pos, i, s)) continue;
 
             dots.add(i);
             this.backtrack(s);
