@@ -43,7 +43,7 @@ public class DiameterOfBinaryTree {
         int left = this.maxDepth(node.left);
         int right = this.maxDepth(node.right);
 
-        this.max = Math.max(this.max, left+right);
+        this.max = Math.max(this.max, left+right+1);
 
         return Math.max(left, right) + 1;
     }
