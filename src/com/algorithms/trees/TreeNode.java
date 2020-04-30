@@ -6,7 +6,8 @@ public class TreeNode {
     public TreeNode right;
     public int verticalDistance;
     public Character ch;
-
+    public Integer height;
+    
     public TreeNode(Integer val){
         this.val = val;
     }
