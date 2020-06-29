@@ -78,27 +78,22 @@ public class VerifyPreorderSerialization {
 
 public class Solution{
 
-    public boolean isValidSerialization(String preorder){
-
-        int n = preorder.length();
+    public boolean isValidSerialization(String preorder) {
+        // number of available slots
         int slots = 1;
-
-        for (int i=0; i<n; i++){
-            if (preorder.charAt(i)==','){
-                slots--;
-
-                if (slots < 0){
-                    return false;
-                }
-
-                if (preorder.charAt(i-1) != '#'){
-                    slots += 2;
-                }
-            }
+    
+        for(String node : preorder.split(",")) {
+          // one node takes one slot
+          --slots;
+    
+          // no more slots available
+          if (slots < 0) return false;
+    
+          // non-empty node creates two children slots
+          if (!node.equals("#")) slots += 2;
         }
-
-        slots = preorder.charAt(n-1) != '#' ? slots+1: slots-1;
-
+    
+        // all slots should be used up
         return slots == 0;
-    }
+      }
 }
