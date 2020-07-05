@@ -28,7 +28,7 @@ public class BoundaryTraversal {
 
             this.printLeaves(node.right);
 
-            this.traverseRight(node.left);
+            this.traverseRight(node.right);
         }
     }
 
@@ -42,7 +42,7 @@ public class BoundaryTraversal {
             }
             else if (node.right != null){
                 System.out.print(node.val);
-                this.traverseRight(node.right);
+                this.traverseLeft(node.right);
             }
 
             // do nothing if it is a leaf node, this way we avoid
