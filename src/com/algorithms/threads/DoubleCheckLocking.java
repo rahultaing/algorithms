@@ -1,5 +1,7 @@
 import jdk.nashorn.internal.ir.ExpressionStatement;
 
+/*https://www.youtube.com/watch?v=Z5TRputhzHs&t=360s */
+
 public class ExpensiveObject{
 
 
