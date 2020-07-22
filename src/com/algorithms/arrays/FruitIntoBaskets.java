@@ -20,7 +20,7 @@ public class Solution{
         while (j<n){
 
             if (map.size() <= 2){
-                map.put(trees[i], j);
+                map.put(trees[j], j);
                 j++;
             }
 
