@@ -2,7 +2,7 @@
 
 public class TrafficLight {
 
-    private volatile int green_road_id = 1;
+    private volatile int green_road_id = 1; //Read operation using volatile so that writes from other thread reflects here, multiple cars can cross now
 
     public TrafficLight() {
         
