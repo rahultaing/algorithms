@@ -72,3 +72,67 @@ public class RabinKarp {
         return true;
     }
 }
+
+
+public class Solution2{
+
+    private int prime = 997;
+
+    private int calculateHash(String s, int m){
+        int val = 0;
+        for (int i=0; i<m; i++){
+
+            val += s.charAt(i) + Math.pow(prime, i);
+        }
+
+        return val;
+    }
+
+    private int recalculateHash(String s, int start, int end, int m, int oldHash){
+
+        int newHash = oldHash- s.charAt(start);
+        newHash /= prime;
+        newHash += s.charAt(end) + Math.pow(prime, m-1);
+        return newHash;
+    }
+
+    public boolean isMatch(String text, String pattern){
+
+        int patternHash = calculateHash(pattern, pattern.length());
+        int textHash = calculateHash(text, pattern.length());
+
+        int n = text.length();
+        int m = pattern.length();
+
+        for (int i=1; i<=n-m+1; i++){
+
+            if (textHash == patternHash && areEqual(text, pattern, i-1)){
+                return i-1;
+            }
+
+            if (i< n-m+1){
+                textHash = recalculateHash(text, i, i+m, m, textHash);
+            }
+        }
+
+        return -1;
+    }
+
+    private boolean areEqual(String text, String pattern, int startIndex){
+
+        int i = startIndex;
+        int j = 0;
+
+        while (j<pattern.length()){
+
+            if (text.charAt(i)!=pattern.charAt(j)){
+                return false;
+            }
+
+            i++;
+            j++;
+        }
+
+        return true;
+    }
+}
