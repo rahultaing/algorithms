@@ -33,7 +33,6 @@ public class Solution{
 
         System.out.println(dist);
     }
-
 }
 
 public class Solution2{
@@ -71,7 +70,6 @@ public class Solution2{
             else{
                 dist++;
                 map.put(nums[i], 1);
-
             }
 
             System.out.println(dist);
