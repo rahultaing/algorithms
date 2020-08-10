@@ -28,4 +28,36 @@ public class MaxDepthOfBinaryTree {
 
         return Math.max(this.maxDepth(root.left), this.maxDepth(root.right)) + 1;
     }
+
+    public int maxDepth_iterative(TreeNode node){
+
+        if (node == null){
+            return 0;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<Integer> depths = new Stack<>();
+
+        stack.push(node);
+        depths.push(1);
+
+        int depth = 0, cur_depth = 0;
+        while (!stack.isEmpty()){
+
+            TreeNode cur = stack.pop();
+            cur_depth = depths.pop();
+
+            if (cur!=null){
+
+                depth = Math.max(depth, cur_depth);
+                
+                stack.push(node.left);
+                stack.push(node.right);
+                depths.push(cur_depth + 1);
+                depths.push(cur_depth + 1);
+            }
+        }
+
+        return depth;
+    }
 }
