@@ -1,5 +1,6 @@
 package com.algorithms.trees;
-/*https://leetcode.com/problems/inorder-successor-in-bst/solution/
+/*
+https://leetcode.com/problems/inorder-successor-in-bst/discuss/72656/JavaPython-solution-O(h)-time-and-O(1)-space-iterative
  */
 public class InorderSuccessorBST {
     
