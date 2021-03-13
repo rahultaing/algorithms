@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 /*Given a binary tree, we install cameras on the nodes of the tree. 
 
 Each camera at a node can monitor its parent, itself, and its immediate children.
@@ -30,5 +32,34 @@ class Solution {
         int d1 = Math.min(L[2] + mR12, R[2] + mL12);
         int d2 = 1 + Math.min(L[0], mL12) + Math.min(R[0], mR12);
         return new int[]{d0, d1, d2};
+    }
+}
+
+public class solution2{
+
+    HashSet<TreeNode> set = new HashSet<>();
+    int ans = 0;
+
+    /*greedy solution is much better*/
+    public int minCameraCover(TreeNode root) {
+
+        recurse(root, null);
+        return ans;
+    }
+
+    private void recurse(TreeNode x, TreeNode par){
+
+        if (x==null){
+            return;
+        }
+        recurse(x.left, x);
+        recurse(x.right, x);
+        if ((par==null && !set.contains(x)) || (!set.contains(x.left) || !set.contains(x.right))){
+            ans++;
+            set.add(par);
+            set.add(x);
+            set.add(x.left);
+            set.add(x.right);
+        }
     }
 }
